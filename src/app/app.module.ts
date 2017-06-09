@@ -40,10 +40,6 @@ import {AnimateComponent}  from './animate.component';
           },{
           path:'animate',
           component: AnimateComponent
-          },
-          {
-          path:'mapping',
-          component: MapComponent
           }
     ])
   ],
