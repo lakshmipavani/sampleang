@@ -1,0 +1,29 @@
+
+<!-- <div class="mainbg">
+<div class="image" [ngStyle]="{'background-image':'url(' + object.link + ')'}">
+<h1>
+  {{title}}
+</h1>
+</div>
+</div> -->
+
+<!-- <h1>{{title}}</h1> -->
+<!-- <h2>{{subject1.name}} details!</h2>
+<div><label>id: </label>{{subject1.id}}</div>
+<div><label>name: </label>
+<input [(ngModel)] ="subject1.name"/></div> -->
+
+<div *ngIf="selectedSubject">
+<h2>{{selectedSubject.name}}details!</h2>
+<div><label>id:</label>{{selectedSubject.id}}</div>
+<div><label>name</label>{{selectedSubject.name}}
+<input [(ngModel)]="selectedSubject.name" placeholder="name"/></div>
+</div>
+
+<h2>My Subjects</h2>
+<ul class='subjects'>
+	<li *ngFor='let subject of subjects' [class.selected]='subject === selecetdSubject' (click)="onSelect(subject)">
+	<span class="badge">{{subject.id}}</span>{{subject.name}}</li>
+</ul>
+
+<subject-detail [subject] = 'selectedSubject'></subject-detail>

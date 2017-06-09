@@ -1,0 +1,6 @@
+<div *ngIf="subject">
+<h2>{{subject.name}}details!</h2>
+<div><label>id:</label>{{subject.id}}</div>
+<div><label>name</label>{{subject.name}}
+<input [(ngModel)]="subject.name" placeholder="name"/></div>
+</div>
