@@ -1,16 +1,12 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+
 @Component({
-	selector:'my-map',
-	template:`<sebm-google-map [latitude]="lat" [longitude]="lng">
-                <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-               </sebm-google-map>`,
-    styles:[
-	`sebm-google-map{
-	height:10px;
-	}
-	`]
+  selector: 'map-component',
+  templateUrl: 'map.component.html',
+  styleUrls: ['map.component.css'],
 })
-export class MapComponent{
-	lat: number = 51.678418;
-    lng: number = 7.809007;
+export class MapComponent {
+  title: string = 'My first AGM project';
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 }
